@@ -266,6 +266,12 @@ export class MarkerArea {
         return config;
     }
 
+    public setMarkerColors = (markerColors: MarkerColors): MarkerColors => {
+        this.markerColors = markerColors;
+        this.setStyles();
+        return this.markerColors;
+    }
+
     private setTargetRect = () => {
         const targetRect = this.target.getBoundingClientRect() as DOMRect;
         const bodyRect = this.targetRoot.parentElement.getBoundingClientRect();
